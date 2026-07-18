@@ -1,0 +1,32 @@
+# Composer
+/vendor/
+composer.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+/logs/
+*.log
+
+# Database
+/database/
+*.sqlite
+*.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+/.idea/
+/.vscode/
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.temp
+*.cache

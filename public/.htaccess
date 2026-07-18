@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Если файл или папка существуют — отдаём их
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+Options -Indexes
+
+<Files .env>
+    Require all denied
+</Files>
+
+<DirectoryMatch "^/.*/logs/">
+    Require all denied
+</DirectoryMatch>
